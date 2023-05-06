@@ -1,0 +1,254 @@
+
+/*------------------------ GLOBAL------------------------- */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: #fce2ef;
+}
+
+html{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+a{
+    cursor: pointer;
+}
+
+h1{
+    font-size: 10rem;
+    font-weight: 700;
+    -webkit-text-stroke-width: 4px;
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: #fce2ef;
+    text-align: center;
+    margin: 0;
+}
+
+h2{
+    text-align: center;
+    font-size: 4.5rem;
+    line-height: 110%;
+    font-weight: 600;
+    -webkit-text-stroke: 2px;
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: #fce2ef;
+
+}
+
+h3{
+    font-size: 2.92rem;
+    line-height: 110%;
+    font-weight: 400;
+}
+
+/*------------------------ NAV------------------------- */
+.logo{
+    height: 80px;
+    margin: 5px 5px 5px 20px;
+}
+
+nav {
+    overflow: hidden;
+    background: rgba(32, 0, 8, 0.6);
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: background 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+  /* Links inside the navbar */
+nav a {
+    float: right;
+    display: block;
+    color: #fce2ef;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+
+/*------------------------ MAIN SECTION------------------------- */
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; 
+}
+
+.main-sentence{
+    text-align: center;
+    font-size: 2.28rem;
+    line-height: 110%;
+    margin: 1.14rem 0 0.912rem 0;
+    font-weight: 400;
+}
+
+/*------------------------ PROJECT SECTION------------------------- */
+
+.projets{
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.projet{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 300px;
+}
+
+.application-meteo:hover{
+    background-image: url(/images/projets/close-up-of-thermometer-centigrade-2022-11-10-18-23-57-utc-min.jpg);
+    background-size: cover;
+}
+
+.cake-scrap:hover{
+    background-image: url(/images/projets/blueberry-cheese-pie-sweet-dessert-tasty-concept-2022-09-20-01-11-14-utc-min.jpg);
+    background-size: cover;
+}
+
+.cake-scrap-2:hover{
+    background-image: url(/images/projets/piece-of-chocolate-cake-with-nuts-on-green-plate-2021-09-03-13-05-31-utc-min.jpg);
+    background-size: cover;
+}
+
+.bitcoin:hover{
+    background-image: url(/images/projets/stock-market-graph-2022-12-15-20-43-08-utc-min.jpg);
+    background-size: cover;
+}
+
+
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 450px;
+    padding: 1.3rem;
+    min-height: 250px;
+    position: absolute;
+    z-index: 2;
+    top: 20%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+}
+
+.modal .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal input {
+    padding: 0.7rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.modal p {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0.4rem 0 0.2rem;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.4rem;
+    font-weight: 700;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1em;
+}
+
+.btn-open {
+    position: absolute;
+    bottom: 150px;
+}
+
+.btn-close {
+    transform: translate(10px, -20px);
+    padding: 0.5rem 0.7rem;
+    background: #eee;
+    border-radius: 50%;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+/*------------------------ TECH ------------------------- */
+
+.tech{
+    display: grid;
+    justify-items:center;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
+
+.element{
+    width: 33.33%;
+    padding-bottom: 2rem;
+}
+
+.fa-solid, .fa-brands{
+    font-size: 7.5rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.service-title{
+    font-weight: 400;
+    font-size: 1.68rem;
+}
+
+/*------------------------ EXPERIENCE ------------------------- */
