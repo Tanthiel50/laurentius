@@ -9,95 +9,177 @@
     <link rel="stylesheet" href="css/custom.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
     <title>Document</title>
-</head>
+<link rel="stylesheet" href="https://127.0.0.1:57236/stylesheet?id=WZJiuXyn2uIj17VY"></head>
 
 <body>
     <div id="particles-js"></div>
+    
     <nav>
-        <img src="/images/icon/logoseul_blanc_rose.svg" alt="" class="logo">
-        <ul>
-            <li><a href="">Intro</a> </li>
-            <li><a href="">Projets</a> </li>
-            <li><a href="">Tech</a> </li>
-            <li><a href="">Expériences</a> </li>
-            <li><a href="">FAQ</a> </li>
-            <li><a href="">Contact</a> </li>
+        <img src="/images/icon/logoseul_blanc_rose.svg" alt="" class="logo" />
+        <ul id="nav">
+          <li><a href="#intro" class="title-nav">Intro</a> </li>
+          <li><a href="#projets" class="title-nav">Projets</a> </li>
+          <li><a href="#tech" class="title-nav">Tech</a> </li>
+          <li><a href="#experiences" class="title-nav">Expériences</a> </li>
+          <li><a href="#faq" class="title-nav">FAQ</a> </li>
+          <li><a href="#contact" class="title-nav">Contact</a> </li>
         </ul>
-    </nav>
-</div>
+        <a href="#" class="icon" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars burger"></i>
+        </a>
+      </nav>
+      
+
+
     <!-- ------------------------ MAIN SECTION-------------------------  -->
     <section class="main">
-        <h1>DATA SCIENTIST</h1>
+        <h1 id="intro">DATA SCIENTIST</h1>
         <h2 class="main-sentence">Dylan Lebrun Laurent, en recherche d'alternance à partir de la rentrée 2023</h2>
     </section>
     <!-- ------------------------ PROJECT SECTION-------------------------  -->
-    <h2>Projets</h2>
+    <h2 id="projets">Projets</h2>
     <!-- VISIBLE DIV -->
     <section class="projets">
-        <a class="application-meteo projet">
+        <a class="application-meteo projet" onclick="applicationMeteo()">
             <h3>Application météo</h3>
         </a>
-        <a class="cake-scrap projet">
+        <a class="cake-scrap projet " onclick="cakeScrapV1()">
             <h3>Cake Scrap V1</h3>
         </a>
-        <a class="cake-scrap-2 projet">
+        <a class="cake-scrap-2 projet " onclick="cakeScrapV2()">
             <h3>Cake Scrap V2</h3>
         </a>
-        <a class="bitcoin projet">
+        <a class="bitcoin projet " onclick="bitcoin()">
             <h3>Bitcoin Analyzer</h3>
         </a>
     </section>
-    <!-- <button class="btn btn-open">Open Modal</button> -->
-    <!-- HIDDEN MODAL -->
-    <section class="modal hidden">
-        <div class="flex">
-            <img src="https://avatars.githubusercontent.com/u/62628408?s=96&v=4" width="50px" height="50px" alt="user" />
-            <button class="btn-close">⨉</button>
-        </div>
-        <div>
-            <h3>Stay in touch</h3>
-            <p>
-            This is a dummy newsletter form so don't bother trying to test it. Not
-            that I expect you to, anyways. :)
-            </p>
-        </div>
-        <input type="email" id="email" placeholder="brendaneich@js.com" />
-        <button class="btn">Do Something</button>
+    <!-- HIDDEN MODAL application meteo -->
+    <section class="modal" id="applicationMeteo">
+        <div class="modal-container">
+            <button class="btn-close" id="closeApplicationMeteo" onclick="closeApplicationMeteo()">⨉</button>
+            <div class="img-modal" style="background-image: url(./images/projets/close-up-of-thermometer-centigrade-2022-11-10-18-23-57-utc-min.jpg);"></div>
+            
+                <h3>Le projet</h3>
+                <p>
+                    METEO est un programme d'extraction d'informations météo que j'ai moi-même conçu pour la formation sur les API et le traitement des données.
+                    Pour exécuter ce projet, vous aurez besoin d'Anaconda et d'un IDE (j'utilise PYCHARM). Vous aurez également besoin de certains packages installés sur vos envs comme "datetime", "request", "os.path". l'API est ouverte et gratuite, 
+                    vous n'avez donc pas besoin de clé pour l'exécuter.
+                </p>
+                <h3>L'objectif</h3>
+                <p>Le but de ce programme était de collecter des informations sur la température d'une ville spécifique (villes françaises pour l'instant) en utilisant un fichier json nettoyé 
+                    (via des algorithmes situés dans "location_data_manager" en utilisant "clean_location.json") le tout, sur toutes les villes de France pour pouvoir extraire les données "latitude" et "longitude" 
+                    contenues dans le fichier json. Le programme utilise le today.date() pour vous demander combien de jours de prédictions vous souhaitez, et va ensuite utiliser cette information pour aller jusqu'à la date 
+                    d'aujourd'hui. L'URL est ensuite assemblée avec les informations de ville, date de début et date de fin. Viens ensuite l'appel API pour "demander" les informations et les afficher sur un graphique "en nuage de points". 
+                    L'objectif était de s'entraîner sur les requêtes API, de collecter et de nettoyer les données que je pouvais trouver, en utilisant la documentation de l'API. Dans le cas présent, les données de localisation sont longues et il 
+                    fallait trouver un moyen pour que l'utilisateur n'ait pas à entrer la latitude et la longitude, mais plutôt un nom de ville. Dans un deuxième temps, l'idée était de s'entraîner à canaliser les données que je voulais et à les visualiser 
+                    aussi clairement que possible. note: plt.show n'est pas nouveau pour moi mais je ne le maîtrise pas encore assez pour que les données soient affichées exactement comme je le souhaite. Je ne me suis pas concentré sur le débogage 
+                    (ex : si vous entrez un numéro et non un nom de ville, ou si c'est en MAJ complet au lieu de minuscules, etc.). Ce sera surement vu lors d'une seconde version.</p>
+            
+            <div class="footer-modale">
+                <a class="btn" href="https://github.com/LebrunLaurentDylan/meteo" target="_blank">Lien Github</a>
+            </div>
+        </div>    
     </section>
-    <!-- HIDDEN OVERLAY -->
-    <div class="overlay hidden"></div>
+
+    <!-- HIDDEN MODAL cake scrap V1 -->
+    <section class="modal" id="cakeScrapV1">
+        <div class="modal-container">
+            <button class="btn-close" id="closeCakeScrapV1" onclick="closeCakeScrapV1()">⨉</button>
+            <div class="img-modal" style="background-image: url(./images/projets/blueberry-cheese-pie-sweet-dessert-tasty-concept-2022-09-20-01-11-14-utc-min.jpg);"></div>
+            
+                <h3>Le projet</h3>
+                <p>
+                    Projet guidé dans le cadre d'un cours sur le web-scraping
+                </p>
+                <h3>L'objectif</h3>
+                <p>Apprendre le scraping, pour extraire des informations à partir de pages web (HTML). <br>
+                    Extraire des recettes de gateaux et donner à l'algorithme la liste des ingrédients que l'on possède chez nous (farine, sucre, oeufs...). Celui ci nous proposera une liste de recette que l'on peut réaliser en fonction des ingrédients. <br>
+                    Apprendre à utiliser Requests, Beautifulsoup, et Pandas pour extraire les données au format Excel. <br>
+                    Utiliser un site public réel cuisine-libre.org pour récuprer les recettes et les stocker dans un fichier json et éviter de les re-scrap à chaque appel du programme.</p>
+            
+            <div class="footer-modale">
+                <a class="btn" href="https://github.com/LebrunLaurentDylan/cake_scrap_v1" target="_blank">Lien Github</a> 
+            </div>
+        </div>    
+    </section>
+
+    <!-- HIDDEN MODAL cake scrap V2 -->
+    <section class="modal" id="cakeScrapV2">
+        <div class="modal-container">
+            <button class="btn-close" id="closeCakeScrapV2" onclick="closeCakeScrapV2()">⨉</button>
+            <div class="img-modal" style="background-image: url(./images/projets/piece-of-chocolate-cake-with-nuts-on-green-plate-2021-09-03-13-05-31-utc-min.jpg);"></div>
+            
+                <h3>Le projet</h3>
+                <p>
+                    Projet guidé dans le cadre d'un cours sur le web-scraping
+                </p>
+                <h3>L'objectif</h3>
+                <p>Apprendre le scraping, pour extraire des informations à partir de pages web (HTML). <br>
+                    Extraire des recettes de gateaux et donner à l'algorithme la liste des ingrédients que l'on possède chez nous (farine, sucre, oeufs...). Celui ci nous proposera une liste de recette que l'on peut réaliser en fonction des ingrédients. <br>
+                    Apprendre à utiliser Requests, Beautifulsoup, et Pandas pour extraire les données au format Excel. <br>
+                    Utiliser un site public réel cuisine-libre.org pour récuprer les recettes et les stocker dans un fichier json et éviter de les re-scrap à chaque appel du programme.</p>
+                <h3>La différence avec la V1</h3>
+                <p>Dans cette partie du projet, nous utilisons un site public réel cuisine-libre.org pour récupérer les recettes et les stocker dans un fichier json et éviter de les re-scrap à chaque appel du programme.</p>
+            <div class="footer-modale">
+                <a class="btn" href="https://github.com/LebrunLaurentDylan/cake_scrap_v2" target="_blank">Lien Github</a> 
+            </div>
+        </div>    
+    </section>
+
+    <!-- HIDDEN MODAL bitcoin -->
+    <section class="modal" id="bitcoin">
+        <div class="modal-container">
+            <button class="btn-close" id="closeBitcoin" onclick="closeBitcoin()">⨉</button>
+            <div class="img-modal" style="background-image: url(./images/projets/stock-market-graph-2022-12-15-20-43-08-utc-min.jpg);"></div>
+            
+                <h3>Le projet</h3>
+                <p>
+                    Projet guidé dans le cadre d'un cours sur le web-scraping
+                </p>
+                <h3>L'objectif</h3>
+                <p>Apprendre le scraping, pour extraire des informations à partir de pages web (HTML). <br>
+                    Extraire des recettes de gateaux et donner à l'algorithme la liste des ingrédients que l'on possède chez nous (farine, sucre, oeufs...). Celui ci nous proposera une liste de recette que l'on peut réaliser en fonction des ingrédients. <br>
+                    Apprendre à utiliser Requests, Beautifulsoup, et Pandas pour extraire les données au format Excel. <br>
+                    Utiliser un site public réel cuisine-libre.org pour récuprer les recettes et les stocker dans un fichier json et éviter de les re-scrap à chaque appel du programme.</p>
+                <h3>La différence avec la V1</h3>
+                <p>Dans cette partie du projet, nous utilisons un site public réel cuisine-libre.org pour récupérer les recettes et les stocker dans un fichier json et éviter de les re-scrap à chaque appel du programme.</p>
+            <div class="footer-modale">
+                <a class="btn" href="https://github.com/LebrunLaurentDylan/Bitcoin_Analyzer" target="_blank">Lien Github</a> 
+            </div>
+        </div>    
+    </section>
     
     <!-- ------------------------ TECH SECTION-------------------------  -->
-    <h2>Tech</h2>
+    <h2 id="tech">Tech</h2>
     <section class="tech">
         <div class="element">
-            <i class="fa-brands fa-python"></i>
+            <i class="fa-brands fa-python tech-icon"></i>
             <div class="service-title">Python</div>
         </div>
         <div class="element">
-            <i class="fa-solid fa-database"></i>
+            <i class="fa-solid fa-database tech-icon"></i>
             <div class="service-title">SQL</div>
         </div>
         <div class="element">
-            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-github tech-icon"></i>
             <div class="service-title">Github</div>
         </div>
         <div class="element">
-            <i class="fa-solid fa-signal"></i>
+            <i class="fa-solid fa-signal tech-icon"></i>
             <div class="service-title">Power Bi</div>
         </div>
         <div class="element">
-            <i class="fa-solid fa-table"></i>
+            <i class="fa-solid fa-table tech-icon"></i>
             <div class="service-title">Excel</div>
         </div>
         <div class="element">
-            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-google tech-icon"></i>
             <div class="service-title">Google Analytics</div>
         </div>
     </section>
 
     <!-- ------------------------ EXPERIENCE SECTION-------------------------  -->
-    <h2>Expériences</h2>
+    <h2 id="experiences">Expériences</h2>
     <section class="experience">
         <div class="single-xp">
             <h4>Autodidacte</h4>
@@ -140,7 +222,7 @@
     </section>
 
     <!-- ------------------------ FAQ--------------------------->
-    <h2>FAQ</h2>
+    <h2 id="faq">FAQ</h2>
     <section>
         <div class="collapsible">
             <h3 class="collapsible-header">- Autodidacte ?</h3>
@@ -164,7 +246,7 @@
     </section>
 
     <!-- ------------------------ CONTACT --------------------------->
-    <h2>Contact</h2>
+    <h2 id="contact">Contact</h2>
     <section class="contact">
         <p class="name">Dylan Lebrun Laurent</p>
         <div class="icon">

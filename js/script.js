@@ -1,164 +1,149 @@
-const modal = document.querySelector(".modal");
-const overlay = document.querySelector(".overlay");
-const openModalBtn = document.querySelector(".btn-open");
-const closeModalBtn = document.querySelector(".btn-close");
+// const modal = document.querySelector(".modal");
+// const overlay = document.querySelector(".overlay");
+// const openModalBtn = document.querySelector(".btn-open");
+// const closeModalBtn = document.querySelector(".btn-close");
 
-// close modal function
-const closeModal = function () {
-  modal.classList.add("hidden");
-  overlay.classList.add("hidden");
-};
+// // close modal function
+// const closeModal = function () {
+//   modal.classList.add("hidden");
+//   overlay.classList.add("hidden");
+// };
+
+// // close the modal when the close button and overlay is clicked
+// closeModalBtn.addEventListener("click", closeModal);
+// overlay.addEventListener("click", closeModal);
+
+// // close modal when the Esc key is pressed
+// document.addEventListener("keydown", function (e) {
+//   if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+//     closeModal();
+//   }
+// });
+
+// // open modal function
+// const openModal = function () {
+//   modal.classList.remove("hidden");
+//   overlay.classList.remove("hidden");
+// };
+// // open modal event
+// openModalBtn.addEventListener("click", openModal);
+
+/*------------------------ APPLICATION METEO------------------------- */
+
+function applicationMeteo() {
+  el = document.getElementById("applicationMeteo");
+  el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+  }
 
 // close the modal when the close button and overlay is clicked
-closeModalBtn.addEventListener("click", closeModal);
-overlay.addEventListener("click", closeModal);
+function closeApplicationMeteo() {
+  var appDiv = document.getElementById("applicationMeteo");
+  appDiv.style.visibility = "hidden";
+}
 
-// close modal when the Esc key is pressed
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
-    closeModal();
+// Ajouter un écouteur d'événements "keydown" sur l'ensemble du document
+document.addEventListener('keydown', function(event) {
+  // Récupérer la modal "applicationMeteo"
+  var appDiv = document.getElementById("applicationMeteo");
+  // Vérifier si la touche appuyée est la touche "escap"
+  if (event.key === "Escape") {
+    // Masquer la modal si la touche "escape" est appuyée
+    appDiv.style.visibility = "hidden";
   }
 });
 
-// open modal function
-const openModal = function () {
-  modal.classList.remove("hidden");
-  overlay.classList.remove("hidden");
-};
-// open modal event
-openModalBtn.addEventListener("click", openModal);
+/*------------------------ CAKE SCRAP V1------------------------- */
 
+function cakeScrapV1() {
+  el = document.getElementById("cakeScrapV1");
+  el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+  }
 
-/* ---- particles.js config ---- */
+// close the modal when the close button and overlay is clicked
+function closeCakeScrapV1() {
+  var appDiv = document.getElementById("cakeScrapV1");
+  appDiv.style.visibility = "hidden";
+}
 
-particlesJS("particles-js", {
-  "particles": {
-    "number": {
-      "value": 380,
-      "density": {
-        "enable": true,
-        "value_area": 800
-      }
-    },
-    "color": {
-      "value": "#ffffff"
-    },
-    "shape": {
-      "type": "circle",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
-      },
-      "polygon": {
-        "nb_sides": 5
-      },
-      "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
-      }
-    },
-    "opacity": {
-      "value": 0.5,
-      "random": false,
-      "anim": {
-        "enable": false,
-        "speed": 1,
-        "opacity_min": 0.1,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 3,
-      "random": true,
-      "anim": {
-        "enable": false,
-        "speed": 40,
-        "size_min": 0.1,
-        "sync": false
-      }
-    },
-    "line_linked": {
-      "enable": true,
-      "distance": 150,
-      "color": "#ffffff",
-      "opacity": 0.4,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 6,
-      "direction": "none",
-      "random": false,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false,
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
-      }
-    }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "grab"
-      },
-      "onclick": {
-        "enable": true,
-        "mode": "push"
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 140,
-        "line_linked": {
-          "opacity": 1
-        }
-      },
-      "bubble": {
-        "distance": 400,
-        "size": 40,
-        "duration": 2,
-        "opacity": 8,
-        "speed": 3
-      },
-      "repulse": {
-        "distance": 200,
-        "duration": 0.4
-      },
-      "push": {
-        "particles_nb": 4
-      },
-      "remove": {
-        "particles_nb": 2
-      }
-    }
-  },
-  "retina_detect": true
+// Ajouter un écouteur d'événements "keydown" sur l'ensemble du document
+document.addEventListener('keydown', function(event) {
+  // Récupérer la modal "applicationMeteo"
+  var appDiv = document.getElementById("cakeScrapV1");
+  // Vérifier si la touche appuyée est la touche "escap"
+  if (event.key === "Escape") {
+    // Masquer la modal si la touche "escape" est appuyée
+    appDiv.style.visibility = "hidden";
+  }
 });
 
+/*------------------------ CAKE SCRAP V2------------------------- */
 
-/* ---- stats.js config ---- */
-
-var count_particles, stats, update;
-stats = new Stats;
-stats.setMode(0);
-stats.domElement.style.position = 'absolute';
-stats.domElement.style.left = '0px';
-stats.domElement.style.top = '0px';
-document.body.appendChild(stats.domElement);
-count_particles = document.querySelector('.js-count-particles');
-update = function() {
-  stats.begin();
-  stats.end();
-  if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-    count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+function cakeScrapV2() {
+  el = document.getElementById("cakeScrapV2");
+  el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
   }
-  requestAnimationFrame(update);
-};
-requestAnimationFrame(update);
+
+// close the modal when the close button and overlay is clicked
+function closeCakeScrapV2() {
+  var appDiv = document.getElementById("cakeScrapV2");
+  appDiv.style.visibility = "hidden";
+}
+
+// Ajouter un écouteur d'événements "keydown" sur l'ensemble du document
+document.addEventListener('keydown', function(event) {
+  // Récupérer la modal "applicationMeteo"
+  var appDiv = document.getElementById("cakeScrapV2");
+  // Vérifier si la touche appuyée est la touche "escap"
+  if (event.key === "Escape") {
+    // Masquer la modal si la touche "escape" est appuyée
+    appDiv.style.visibility = "hidden";
+  }
+});
+
+/*------------------------ bitcoin------------------------- */
+
+function bitcoin() {
+  el = document.getElementById("bitcoin");
+  el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+  }
+
+// close the modal when the close button and overlay is clicked
+function closeBitcoin() {
+  var appDiv = document.getElementById("bitcoin");
+  appDiv.style.visibility = "hidden";
+}
+
+// Ajouter un écouteur d'événements "keydown" sur l'ensemble du document
+document.addEventListener('keydown', function(event) {
+  // Récupérer la modal "applicationMeteo"
+  var appDiv = document.getElementById("bitcoin");
+  // Vérifier si la touche appuyée est la touche "escap"
+  if (event.key === "Escape") {
+    // Masquer la modal si la touche "escape" est appuyée
+    appDiv.style.visibility = "hidden";
+  }
+});
+
+/*------------------------ defilement smooth------------------------- */
+// Récupérer tous les liens de la navbar qui contiennent une ancre
+var navbarLinks = document.querySelectorAll('.navbar a[href^="#"]');
+
+// Ajouter un écouteur d'événements "click" à chaque lien
+// Récupérer tous les liens de la navbar qui contiennent une ancre
+var navbarLinks = document.querySelectorAll('nav a[href^="#"]');
+
+// Ajouter un écouteur d'événements "click" à chaque lien
+navbarLinks.forEach(function(link) {
+  link.addEventListener('click', function(event) {
+    // Empêcher le comportement par défaut de l'événement "click"
+    event.preventDefault();
+    // Récupérer l'élément cible correspondant à l'ancre dans l'attribut "href" du lien
+    var target = document.querySelector(link.getAttribute('href'));
+    // Déplacer la page en douceur jusqu'à l'emplacement de l'ancre
+    target.scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+/*------------------------ navbar------------------------- */
