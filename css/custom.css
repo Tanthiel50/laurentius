@@ -116,6 +116,15 @@ p{
     }
 }
 
+@media (max-width: 360px) {
+    h1 {
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+}
+
 /*------------------------ NAV------------------------- */
 .logo{
     height: 50px;
@@ -262,7 +271,7 @@ p{
     background-color: #ddd;
 }
 
-/* Medai qurey section */
+/* Media query section */
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     
@@ -271,9 +280,6 @@ p{
     }
     
 }
-
-
-
 
 @media screen and (max-width:768px) {
     
@@ -384,8 +390,6 @@ p{
     background-size: cover;
 }
 
-
-
 .modal {
     visibility: hidden;
     position: absolute;
@@ -458,6 +462,31 @@ p{
         width: 100%;
     }
 }
+
+@media (max-width: 360px) {
+    .projet {
+        width: 300px;
+        margin-top: 10px;
+    }
+    .application-meteo{
+        background-image: url("../images/projets/close-up-of-thermometer-centigrade-2022-11-10-18-23-57-utc-min.jpg");
+        background-size: cover;
+    }
+    .cake-scrap{
+        background-image: url("../images/projets/blueberry-cheese-pie-sweet-dessert-tasty-concept-2022-09-20-01-11-14-utc-min.jpg");
+        background-size: cover;
+    }
+    .cake-scrap-2{
+        background-image: url("../images/projets/piece-of-chocolate-cake-with-nuts-on-green-plate-2021-09-03-13-05-31-utc-min.jpg");
+        background-size: cover;
+    }
+    .bitcoin{
+        background-image: url("../images/projets/stock-market-graph-2022-12-15-20-43-08-utc-min.jpg");
+        background-size: cover;
+    }
+}
+
+
 
 /*------------------------ TECH ------------------------- */
 
