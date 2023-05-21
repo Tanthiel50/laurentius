@@ -8,8 +8,9 @@
     <!-- STYLESHEET -->
     <link rel="stylesheet" href="css/custom.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
-    <title>Document</title>
-<link rel="stylesheet" href="https://127.0.0.1:57236/stylesheet?id=WZJiuXyn2uIj17VY"></head>
+    <title>Dylan Lebrun-Laurent</title>
+    <link rel="stylesheet" href="https://127.0.0.1:57236/stylesheet?id=WZJiuXyn2uIj17VY">
+</head>
 
 <body>
     <div id="particles-js"></div>
@@ -128,7 +129,7 @@
                     Extraire des recettes de gateaux et donner à l'algorithme la liste des ingrédients que l'on possède chez nous (farine, sucre, oeufs...). Celui ci nous proposera une liste de recette que l'on peut réaliser en fonction des ingrédients. <br>
                     Apprendre à utiliser Requests, Beautifulsoup, et Pandas pour extraire les données au format Excel. <br>
                     Utiliser un site public réel cuisine-libre.org pour récuprer les recettes et les stocker dans un fichier json et éviter de les re-scrap à chaque appel du programme.</p>
-                <h3>La différence avec la V1</h3>
+                <h3 class="titre-modal">La différence avec la V1</h3>
                 <p>Dans cette partie du projet, nous utilisons un site public réel cuisine-libre.org pour récupérer les recettes et les stocker dans un fichier json et éviter de les re-scrap à chaque appel du programme.</p>
             <div class="footer-modale">
                 <a class="btn" href="https://github.com/LebrunLaurentDylan/cake_scrap_v2" target="_blank">Lien Github</a> 
@@ -144,15 +145,18 @@
             
                 <h3 class="titre-modal">Le projet</h3>
                 <p>
-                    Projet guidé dans le cadre d'un cours sur le web-scraping
+                    Le projet est d'extraire les données de n'importe quelle crypto-monnaie, en utilisant une API (coinapi.io). 
+                    L'application se met à jour avec des données quotidiennes à chaque lancement, pour dessiner des graphiques et des courbes à partir de ces données, 
+                    Elle utilise ensuite ces donénes pour déterminer les points de vente et d'achat en fonction de son propre calcul, puis utilise un faux portefeuille contenant 1000 USD (ou EUR) pour acheter et vendre des BTC
                 </p>
                 <h3 class="titre-modal">L'objectif</h3>
-                <p>Apprendre le scraping, pour extraire des informations à partir de pages web (HTML). <br>
-                    Extraire des recettes de gateaux et donner à l'algorithme la liste des ingrédients que l'on possède chez nous (farine, sucre, oeufs...). Celui ci nous proposera une liste de recette que l'on peut réaliser en fonction des ingrédients. <br>
-                    Apprendre à utiliser Requests, Beautifulsoup, et Pandas pour extraire les données au format Excel. <br>
-                    Utiliser un site public réel cuisine-libre.org pour récuprer les recettes et les stocker dans un fichier json et éviter de les re-scrap à chaque appel du programme.</p>
-                <h3 class="titre-modal">La différence avec la V1</h3>
-                <p>Dans cette partie du projet, nous utilisons un site public réel cuisine-libre.org pour récupérer les recettes et les stocker dans un fichier json et éviter de les re-scrap à chaque appel du programme.</p>
+                <p>Le but même de cet algorithme est de pouvoir faire de faux profits
+                    Il utilisera donc deux "moyennes mobiles" basées sur le taux de clôture de chaque jour pour calculer et déterminer le bon moment pour acheter/vendre. Ce programme sera toujours basé sur les données passées jusqu'à la date d'hier
+                     (donc le taux de clôture date ne se produira que lorsque le jour présent est passé) En raison du nombre de limitations d'appels sur l'API, l'algorithme enregistre les données qu'il a recueillies dans un fichier json pour éviter 
+                     d'appeler toutes les données à chaque fois que vous exécutez le programme mais en appelant simplement les données vous n'avez pas et avez ensuite stocké dans le fichier json, classé par date.
+                    Enfin, l'algorithme possède une fonction pour trouver et remplacer les incohérences dans les données qu'il a recueillies (comme des débits de données évidemment faux) et les remplacer ensuite par les bonnes données précédentes qu'il a en 
+                    mémoire avec la bonne date.
+                </p>
             <div class="footer-modale">
                 <a class="btn" href="https://github.com/LebrunLaurentDylan/Bitcoin_Analyzer" target="_blank">Lien Github</a> 
             </div>
@@ -236,7 +240,7 @@
     <section class="faq">
         <div class="collapsible ">
             <h3 class="collapsible-header autodidacte">- Autodidacte ?</h3>
-            <p class="collapsible-body">J'ai toujours été autodidacte pour beaucoup de compétences acquises dans ma vie, au fur et à mesure de mes expériences professionnelles, il m'était donnée de travailler sur bon nombre d'outils : principalement pour des tâches spécifiques reliées à mon poste du moment.
+            <p class="collapsible-body">J'ai toujours été autodidacte pour beaucoup de compétences acquises dans ma vie, au fur et à mesure de mes expériences professionnelles, il m'était donné de travailler sur bon nombre d'outils : principalement pour des tâches spécifiques reliées à mon poste du moment.
                 Il était donc tout naturel, pour moi, de poursuivre sur cette lancée pour me permettre de monter en compétences en programmation, mathématique, statistique, etc.
                 Malgré tout et au-delà d'un certain point, je considère qu'il est obligatoire de confirmer et de consolider ses connaissances acquises par le biais d'une formation académique et de l'expérience professionnelle.
                 Cela permet d'avoir d'autres points de vue sur son travail, de se rendre compte plus vite de ses lacunes et points d'amélioration, mais aussi d'apprendre et s'inspirer des autres pour progresser. Le travail en équipe est pour moi une pierre angulaire d'un apprentissage réussi.</p>
@@ -247,7 +251,7 @@
         </div>
         <div class="collapsible">
             <h3 class="collapsible-header et-apres">- Et après ?</h3>
-            <p class="collapsible-body">Après mon alternance, je souhaite poursuivre dans la même voie pendant un certain temps, afin de gagner en fluidité et en efficacité dans la gestion et la réalisation des projets qui me sont confiés. Puis pourquoi pas, dans un avenir plus lointain, me spécialiser dans la construction et dans l'apprentissage de réseau de neurones, car cela a toujours été l'une des disciplines du domaine de la Data qui me motive le plus. Continuer, pendant mon temps libre, à créer et gérer différents projets.</p>
+            <p class="collapsible-body">Après mon alternance, je souhaite poursuivre dans la même voie pendant un certain temps, afin de gagner en fluidité et en efficacité dans la gestion et la réalisation des projets qui me sont confiés. Puis pourquoi pas, dans un avenir plus lointain, me spécialiser dans la construction et dans l'apprentissage de réseaux de neurones, car cela a toujours été l'une des disciplines du domaine de la Data qui me motive le plus. Continuer, pendant mon temps libre, à créer et gérer différents projets.</p>
         </div>
         <div class="collapsible">
             <h3 class="collapsible-header pourquoi-moi">- Pourquoi moi ?</h3>
